@@ -24,10 +24,15 @@ export default async function handler(req, res) {
     return res.status(200).json({ text: response.text ?? "返答なし" });
   } catch (error) {
     console.error("Gemini API Error details:", error);
-    const statusCode = error.status || 500;
-    return res.status(statusCode).json({
-      error: error.message || "Internal Server Error",
+    // エラーオブジェクトの構造に合わせてメッセージとステータスを抽出
+    const errorMessage =
+      error.message || JSON.stringify(error) || "Internal Server Error";
+    const statusCode = error.status || error.statusCode || 500;
+
+    return res.status(Number(statusCode)).json({
+      error: errorMessage,
       status: statusCode,
+      details: error.errorDetails || null,
     });
   }
 }
