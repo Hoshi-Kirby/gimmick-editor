@@ -24,6 +24,10 @@ export default async function handler(req, res) {
     return res.status(200).json({ text: response.text ?? "返答なし" });
   } catch (error) {
     console.error("Gemini API Error details:", error);
-    return res.status(500).json({ error: error.message });
+    const statusCode = error.status || 500;
+    return res.status(statusCode).json({
+      error: error.message || "Internal Server Error",
+      status: statusCode,
+    });
   }
 }
