@@ -37,6 +37,7 @@ const generationNames = {
   gen7: "サン・ムーン、ウルトラサン・ウルトラムーン",
   gen8: "ソード・シールド",
   gen9: "スカーレット・バイオレット",
+  gen0: "チャンピオンズ",
 };
 
 const ruleNames = {

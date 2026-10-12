@@ -50,6 +50,7 @@ function App() {
     gen7: ["single", "double", "multi"], // SM / USUM
     gen8: ["single", "double"], // 剣盾
     gen9: ["single", "double", "multi"], // SV
+    gen0: ["single", "double"], // Ch
   };
   const fieldSize = {
     single: 1,
@@ -195,7 +196,7 @@ function App() {
       // ★ pokeDataを取得した後なので、ここで使う
       let abilities;
 
-      if (generation === "free") {
+      if (generation === "free" || generation === "gen0") {
         abilities = pokeData.abilities;
       } else {
         const genNumber = Number(generation.replace("gen", ""));
@@ -462,6 +463,7 @@ function App() {
         <option value="gen7">SM / USUM</option>
         <option value="gen8">剣盾</option>
         <option value="gen9">SV</option>
+        <option value="gen0">チャンピオンズ</option>
       </select>
       <select
         value={battleSettings.rule}
