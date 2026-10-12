@@ -19,7 +19,7 @@ export function SelectionCard({
     <div
       className="selection-card"
       style={{
-        border: "1px solid #ddd",
+        border: "1px solid var(--border)",
         padding: "10px",
         marginBottom: "10px",
         borderRadius: "6px",

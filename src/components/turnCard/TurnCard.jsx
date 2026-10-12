@@ -90,7 +90,7 @@ export function TurnCard({
   return (
     <div
       style={{
-        border: "1px solid #ccc",
+        border: "1px solid var(--border)",
         padding: "15px",
         marginBottom: "20px",
         borderRadius: "8px",

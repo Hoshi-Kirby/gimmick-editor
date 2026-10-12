@@ -190,11 +190,10 @@
 }
 
 .party-card {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   padding: 10px;
   width: 220px;
   border-radius: 8px;
-  background: #ffffff;
 }
 .analyze-button {
   padding: 14px 28px;
@@ -213,4 +212,29 @@
 .analyze-button:hover {
   background-color: #357abd;
   transform: scale(1.03);
+}
+.copy-icon {
+  cursor: pointer;
+  fill: #4a90e2; /* 通常色 */
+  transition: all 0.2s ease;
+}
+
+.copy-icon:hover {
+  fill: #357abd; /* ホバー時の色 */
+  transform: scale(1.15); /* 少し拡大 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .analyze-button {
+    background-color: #45688a;
+  }
+  .analyze-button:hover {
+    background-color: #204c79;
+  }
+  .copy-icon {
+    fill: #45688a;
+  }
+  .copy-icon:hover {
+    fill: #204c79;
+  }
 }
