@@ -1,0 +1,39 @@
+.event-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.transparent-select:not(:focus) {
+  border: none;
+  background: transparent;
+  outline: none;
+  appearance: none;
+  background-image: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.transparent-input:not(:focus) {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+}
+
+.fixed-textarea {
+  width: 80%;
+  height: 18px;
+  resize: none;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  padding: 6px;
+  font-size: 10px;
+}
+.fixed-textarea:not(:focus) {
+  border: none;
+  background: transparent;
+  outline: none;
+  overflow: hidden;
+}
